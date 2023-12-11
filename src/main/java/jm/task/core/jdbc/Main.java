@@ -12,7 +12,7 @@ public class Main {
         User user1 = new User("Веня", "Дыркин", (byte) 41);
         User user2 = new User("Курт", "Кобейн", (byte) 27);
         User user3 = new User("Стивен", "Уилсон", (byte) 56);
-        User user4 = new User("Макс", "Кавалеро", (byte) 34);
+        User user4 = new User("Макс", "Кавалера", (byte) 34);
 
         userService.createUsersTable();
         System.out.println("Table is created: ");
