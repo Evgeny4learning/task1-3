@@ -34,6 +34,7 @@ public class Main {
         for (User user : userService.getAllUsers()){
             System.out.println(user);
         }
+//        userService.removeUserById(2);
 
         userService.cleanUsersTable();
         System.out.println("Table is cleaned");

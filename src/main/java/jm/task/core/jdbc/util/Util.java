@@ -46,7 +46,7 @@ public class Util {
 
     private static SessionFactory buildSessionFactory() {
         try {
-           Configuration configuration = new Configuration();
+           final Configuration configuration = new Configuration();
             //так
 //           Properties settings = new Properties();
 //           settings.put(Environment.DRIVER, "org.postgresql.Driver");
@@ -56,7 +56,7 @@ public class Util {
 //           settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
 //
 //           settings.put(Environment.SHOW_SQL, "true");
-//           //settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "");
+//           settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 //           settings.put(Environment.HBM2DDL_AUTO, "update");
 //
 //           configuration.setProperties(settings);
@@ -72,7 +72,7 @@ public class Util {
            configuration.setProperty("hibernate.connection.password", "jj8Iup");
            configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
            configuration.setProperty("hibernate.show_sql", "true");
-           //configuration.setProperty("hibernate.hbm2ddl.auto", "update");
+           configuration.setProperty("hibernate.hbm2ddl.auto", "create-drop");
            configuration.addAnnotatedClass(User.class);
            return configuration.buildSessionFactory();
         } catch (Throwable ex){
